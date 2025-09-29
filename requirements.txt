@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+python-dotenv
+twilio
+chromadb
+pydantic
+requests
+aiohttp
+sqlalchemy
+databases
+apscheduler
+google-generativeai
+python-multipart

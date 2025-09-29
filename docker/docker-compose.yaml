@@ -1,0 +1,16 @@
+services:
+  ai-agent:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: ai_agent_app
+    ports:
+      - "8000:8000"    # API
+      - "4040:4040"    # Ngrok web UI
+    environment:
+      - NGROK_AUTH_TOKEN=${NGROK_AUTH_TOKEN}
+    command: >
+      sh -c "
+        ngrok http 8000 --log=stdout &
+        uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+      "
