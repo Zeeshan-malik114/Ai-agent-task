@@ -83,7 +83,7 @@ async def voice_end(
             handle_call_end,
             caller,
             "Your last conversation summary",
-            email=email,
+            email=email, # type: ignore
             memory_data=memory_data
         )
         return {"status": "success", "message": "Follow-up tasks scheduled after call end."}

@@ -40,7 +40,7 @@ async def handle_inbound_call(caller: str, text: str, background_tasks: Backgrou
             handle_call_end,
             caller,
             conversation_summary,
-            email=email,
+            email=email, # type: ignore
             memory_data=conversation_loops[call_id]
         )
         response_text = "Sure! I will email you the summary of our last conversation."
