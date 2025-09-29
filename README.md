@@ -36,6 +36,7 @@ Ai-agent-task/
 ├── requirements.txt
 └── Dockerfile
 
+<pre> ```plaintext Ai-agent-task/ ├── app/ # Core application │ ├── agents/ # AI conversation handlers │ ├── routes/ # API routes │ ├── utils/ # Utility functions │ ├── config.py # Configurations │ ├── db/ # ChromaDB data store ├── docker/ # Docker configuration ├── logs/ # Log files ├── postman_collection.json ├── README.md ├── requirements.txt ├── Dockerfile ``` </pre>
 
 ---
 
